@@ -11,11 +11,105 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;800&family=Poppins:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <style>
+        .font-poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+        .font-em{
+            font-family: 'EB Garamond', serif;
+        }
+    </style>
+    <!-- tailwind custom -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                'btn-color': '#B68C5A',
+              },
+              backgroundImage: {
+                 'banner-bg':"url('./images/banner.png')"
+              }
+            }
+          }
+        }
+      </script>
 </head>
 
 <body>
-    <header>
-
+    <!-- header section -->
+    <header class="max-w-6xl mx-auto">
+        <!-- navbar section -->
+    <nav class="my-12">
+        <div class="navbar">
+            <div class="navbar-start" >
+            
+              <a class="btn btn-ghost normal-case text-xl"><img src="images/logo2.png" alt=""></a>
+            </div>
+            <div class="navbar-center flex">
+              <ul class="menu menu-horizontal px-1 flex-col md:flex-row lg:flex-row font-poppins">
+                <li><a>Home</a></li>
+                <li tabindex="0">
+                  <details>
+                    <summary>Services</summary>
+                    <ul class="p-2">
+                      <li><a>Submenu 1</a></li>
+                      <li><a>Submenu 2</a></li>
+                    </ul>
+                  </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Cases</summary>
+                        <ul class="p-2">
+                          <li><a>Submenu 1</a></li>
+                          <li><a>Submenu 2</a></li>
+                        </ul>
+                      </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Bolg</summary>
+                        <ul class="p-2">
+                          <li><a>Submenu 1</a></li>
+                          <li><a>Submenu 2</a></li>
+                        </ul>
+                      </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Contact Us</summary>
+                        <ul class="p-2">
+                          <li><a>Submenu 1</a></li>
+                          <li><a>Submenu 2</a></li>
+                        </ul>
+                      </details>
+                </li>
+              </ul>
+            </div>
+            <div class="navbar-end">
+              <a class="btn bg-btn-color text-white font-poppins">Free Consultation</a>
+            </div>
+          </div>
+    </nav>
+    <!-- banner section -->
+    <div class="hero h-[550px] bg-banner-bg">
+        <div class="hero-overlay bg-opacity-10"></div>
+        <div class="hero-content text-center text-white">
+          <div>
+            <h1 class="mb-5 text-5xl font-bold font-em">We Provide Effective <br> Legal Solutions</h1>
+            <p class="mb-5 font-poppins">There are many variations of passages of Lorem Ipsum available, but the majority <br> have suffered alteration in some form, by injected humour.</p>
+            <input class="w-[450px] py-3 pl-4 rounded-lg" type="text" placeholder="Search your services">
+            <button class="btn bg-btn-color border-0 text-white ml-5 font-poppins">Get Started</button>
+          </div>
+        </div>
+      </div>
     </header>
 </body>
 
